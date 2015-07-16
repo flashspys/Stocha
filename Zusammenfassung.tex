@@ -70,9 +70,11 @@
 	 -1/+1 & \text {linearer Zusammenhang, gegensinnig/gleichsinnig} \\
 	 0 & \text{unkorreliert/kein linearer Zusammenhang} \\
 	 \text{negativ/positiv} & \text{negativ/positiv korreliert}  \\
-	 <0.5/\geq 0.5 & \text{schwach/stark korreliert}
 	 \end{cases}
-	 \end{equation}
+	 \end{equation}\\
+	 $0 \leq |r_{xy}| < 0.5 \rightarrow $ schwach korreliert.\\
+	 $0.8 \leq |r_{xy}| \leq 1 \rightarrow $ stark korreliert.\\
+	 
 	 \subsection{Regressionsanalyse}
 	 Liefert funktionalen Zusammenhang 
 	 \begin{itemize}
@@ -80,7 +82,7 @@
 	   \item f heißt Regressionsfunktion.
 	   \item Die Werte: y i = f ( x i ) , i = 1 ,..., n, heißen Regressionswerte .
 	   \item $\epsilon$ =  Fehlerterm, da die tatsächlichen Werte von $y_i$ in der Regel nicht getroffen werden
-		\item Bestimmtheitsmaß sagt aus wie naha die Regressionsgerade an den tatsächlichen Werten liegt (1 = bester Wert)	
+		\item Bestimmtheitsmaß sagt aus wie nahe die Regressionsgerade an den tatsächlichen Werten liegt (1 = bester Wert)	
 	 \end{itemize}
 	
 	\section{Wahrscheinlichkeitsrechnung}
@@ -104,18 +106,16 @@
 	\subsection{Modelieren mit Zufallsvariable und Angabe von Verteilung}
 	Angabe der möglichen Ausprägungen in einem Wahrscheinlichkeitsraum $(\Omega,\mathfrak{A},P)$ und Angabe der jeweiligen Wahrscheinlichkeiten für die Belegungen $P(X=A)=$ Wahrscheinlicheit. Meistens kann dann eine Verteilungsfkt gefunden werden, bspw. Binomialverteilung.
 	\subsection{Urnenmodelle}
-		\begin{itemize}
-			\item Qualitätsprüfung ist quasi ein Urnenmodell ohne zurücklegen und ohne beachtung der Reihenfolge mit Hypergeometrischer Verteilung (S.165). $p_k=\frac{\binom{r}{k}\binom{s}{n-k}}{\binom{r+s}{n}}$ n=Anzahl der Züge k=rote Kugeln die ich will r=anzahl roter insgesamt s=anzahl schwarzer insg.
-		\end{itemize}
+		Qualitätsprüfung ist quasi ein Urnenmodell ohne zurücklegen und ohne beachtung der Reihenfolge mit Hypergeometrischer Verteilung (S.165). $p_k=\frac{\binom{r}{k}\binom{s}{n-k}}{\binom{r+s}{n}}$ n=Anzahl der Züge k=rote Kugeln die ich will r=anzahl roter insgesamt s=anzahl schwarzer insg.
 	\subsection{Riemann-Dichte}
-	Warum der Scheiß? Für Modelle mit reelen Zahlen haben wir ein Problem, wir müssen dafür sorgen dass wir alle Wahrscheinlichkeiten abbilden können, aber P($\Sigma(x)$) darf nicht größer 1 werden. Deshalb brauchen wir die Riemann-Dichtefunktion, die definiert ist als:  $P((a,b))=\int_{a}^{b} f(x)dx dx$ 
+	Warum der Scheiß? Für Modelle mit reellen Zahlen haben wir ein Problem, wir müssen dafür sorgen dass wir alle Wahrscheinlichkeiten abbilden können, aber P($\Sigma(x)$) darf nicht größer 1 werden. Deshalb brauchen wir die Riemann-Dichtefunktion, die definiert ist als:  $P((a,b))=\int_{a}^{b} f(x) dx$ 
 	\begin{itemize}
 		\item Dichtefunktion ist analog zur Wahrscheinlichkeitsfuntion bei diskreten Verteilungen. Alle Werte positiv, aber größer als 1 mögl.
 		\item Verteilungsfunkion Ist das Integral der Dichtefunktion, ergibt insgesamt immer 1 und ist monoton steigend bis 1.
 		\item habe ich zwei Variablen (X,Y)und möchte ich die Verteilungsfunktion (X+Y) berechnen muss ich die Faltformel nutzen (S.192)
 	\end{itemize}
 	\subsection{Integralrechnung for Dummies}
-	Integralrechnung wird für stetige Wahrscheinlichkeitsverteilungen benötigt. Habe ich ein Integral und möchte etwas ausrechnen, dann erzeuge ich erstmal die Stammfunktion und setze die Werte für mein x ein. Bei der Stammfunktion ist der Grundgedanke: Die Stammfunktion ist die Funktion, die abgeleitet die jetzige Funktion ergibt. Beim Uneigentlichen Integral wird in diesem Beispiel das $x^{-4y+1}$ unendlich klein, also =0. $$4y \int_{1}^{\infty}x^{-4y}dx = 4y \left[ \frac{x^{-4y+1}}{-4y+1}\right]_{x=1}^{x=\infty} = \frac{4y}{4y-1}$$ \\~\\Man beachte, dass wenn x-(y*(-z)) hat, dann beim minus reinziehen nur y oder z negiert werden muss.
+	Integralrechnung wird für stetige Wahrscheinlichkeitsverteilungen benötigt. Habe ich ein Integral und möchte etwas ausrechnen, dann erzeuge ich erstmal die Stammfunktion und setze die Werte für mein x ein. Bei der Stammfunktion ist der Grundgedanke: Die Stammfunktion ist die Funktion, die abgeleitet die jetzige Funktion ergibt. Beim Uneigentlichen Integral wird in diesem Beispiel das $x^{-4y+1}$ unendlich klein, also =0. $$4y \int_{1}^{\infty}x^{-4y}dx = 4y \left[ \frac{x^{-4y+1}}{-4y+1}\right]_{x=1}^{x=\infty} = \frac{4y}{4y-1}$$ \\~\\Man beachte, dass wenn $x-(y\cdot(-z))$ hat, dann beim minus reinziehen nur y oder z negiert werden muss.
  
 		\subsection{Zusammenzählen zweier }
 		\begin{itemize}
